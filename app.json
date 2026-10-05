@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "JeepMonitor",
+    "slug": "jeepmonitor",
+    "version": "0.4.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0E13",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jaba.jeepmonitor"
+    },
+    "android": {
+      "package": "com.jaba.jeepmonitor",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0E13",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "versionCode": 400
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "neverForLocation": true,
+          "bluetoothAlwaysPermission": "JeepMonitor uses Bluetooth to read your battery monitor and charger."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "JeepMonitor lets you pick a picture for your dashboard."
+        }
+      ]
+    ]
+  }
+}
