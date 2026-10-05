@@ -1,12 +1,9 @@
 <p align="center">
-  <img src="assets/logo.svg" width="140" alt="JeepMonitor logo">
+  <img src="assets/banner.svg" width="100%" alt="JeepMonitor">
 </p>
 
-<h1 align="center">JeepMonitor</h1>
-
 <p align="center">
-  One Android dashboard for a vehicle's power system and extra sensors.<br>
-  Renogy Smart Shunt, Renogy DC-DC charger, a Bluetooth thermometer and the tablet's own tilt sensor, side by side.
+  Renogy Smart Shunt, Renogy DC-DC charger, a Bluetooth thermometer and the tablet's own tilt sensor, side by side on one dashboard you arrange yourself.
 </p>
 
 ---

@@ -1,4 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-label="JeepMonitor">
+<defs>
+<linearGradient id="bbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101A26"/><stop offset="1" stop-color="#070A0E"/></linearGradient>
+<radialGradient id="glow" cx="22%" cy="50%" r="45%"><stop offset="0" stop-color="#22C55E" stop-opacity=".28"/><stop offset="1" stop-color="#22C55E" stop-opacity="0"/></radialGradient>
+<linearGradient id="word" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#86EFAC"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<rect width="1280" height="420" fill="url(#bbg)"/>
+<rect width="1280" height="420" fill="url(#grid)"/>
+<rect width="1280" height="420" fill="url(#glow)"/>
+<g fill="none" stroke="#22C55E" stroke-opacity=".18" stroke-width="2">
+<path d="M560 420 C 700 300, 820 360, 960 250 S 1180 170, 1280 120"/>
+<path d="M560 450 C 710 330, 830 390, 970 280 S 1190 200, 1280 150"/>
+<path d="M560 480 C 720 360, 840 420, 980 310 S 1200 230, 1280 180"/>
+</g>
+<svg x="70" y="50" width="320" height="320" viewBox="0 0 1024 1024">
 <defs>
 <radialGradient id="bg" cx="50%" cy="35%" r="80%"><stop offset="0" stop-color="#16212D"/><stop offset="1" stop-color="#0A0E13"/></radialGradient>
 <linearGradient id="cell" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#86EFAC"/></linearGradient>
@@ -34,4 +49,13 @@
 <g transform="translate(240,240)"><circle r="100" fill="#0E1620" stroke="#FB923C" stroke-width="13" filter="url(#glow)"/><g transform="scale(0.88)"><rect x="-15" y="-66" width="30" height="104" rx="15" fill="none" stroke="#FB923C" stroke-width="10"/><circle cy="46" r="28" fill="#FB923C"/><rect x="-6" y="-24" width="12" height="70" rx="6" fill="#FB923C"/><line x1="26" y1="-48" x2="46" y2="-48" stroke="#FB923C" stroke-width="8" stroke-linecap="round"/><line x1="26" y1="-26" x2="40" y2="-26" stroke="#FB923C" stroke-width="8" stroke-linecap="round"/><line x1="26" y1="-4" x2="46" y2="-4" stroke="#FB923C" stroke-width="8" stroke-linecap="round"/></g></g>
 <g transform="translate(784,240)"><circle r="100" fill="#0E1620" stroke="#38BDF8" stroke-width="13" filter="url(#glow)"/><g transform="scale(0.88)"><path d="M0 -70 C 42 -16 58 12 58 36 A58 58 0 0 1 -58 36 C -58 12 -42 -16 0 -70 Z" fill="#38BDF8"/><path d="M-30 30 A32 32 0 0 0 -4 58" fill="none" stroke="#E0F2FE" stroke-width="9" stroke-linecap="round"/></g></g>
 <g transform="translate(822,596) scale(0.9)" filter="url(#glow)"><path d="M0 66 C-48 8 -58 -6 -58 -32 A58 58 0 1 1 58 -32 C58 -6 48 8 0 66 Z" fill="#FACC15" stroke="#0A0E13" stroke-width="8" stroke-linejoin="round"/><circle cy="-32" r="20" fill="#0E1620"/></g>
+</svg>
+<text x="440" y="205" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="108" font-weight="800" letter-spacing="-2" fill="url(#word)">JeepMonitor</text>
+<text x="444" y="262" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="30" fill="#94A3B8">One dashboard for your vehicle's power and sensors</text>
+<g font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="20" font-weight="600" fill="#CBD5E1">
+<rect x="444" y="296" width="132" height="42" rx="21" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".12"/><text x="510" y="323" text-anchor="middle">Battery</text>
+<rect x="590" y="296" width="132" height="42" rx="21" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".12"/><text x="656" y="323" text-anchor="middle">DC-DC</text>
+<rect x="736" y="296" width="160" height="42" rx="21" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".12"/><text x="816" y="323" text-anchor="middle">Temperature</text>
+<rect x="910" y="296" width="132" height="42" rx="21" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".12"/><text x="976" y="323" text-anchor="middle">Tilt</text>
+</g>
 </svg>
