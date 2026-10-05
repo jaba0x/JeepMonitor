@@ -3,6 +3,12 @@
 All notable changes to JeepMonitor. Versions follow [Semantic Versioning](https://semver.org/); every release is
 tagged `vX.Y.Z`. The Android `versionCode` is `major * 10000 + minor * 100 + patch`.
 
+## [0.5.0] - 2026-10-05
+
+### Added
+- In-app software update on the About screen: checks the latest GitHub release, shows its notes, downloads the APK
+  and hands it to the Android installer. Needs the one-time "install unknown apps" permission.
+
 ## [0.4.0] - 2026-10-05
 
 ### Added

@@ -3,6 +3,7 @@ import { AUTHOR, BLOG_LABEL, BLOG_URL, COPYRIGHT_LINE } from '../about';
 import { DRIVERS } from '../ble/registry';
 import { BUILD, VERSION } from '../version';
 import { colors } from './theme';
+import { UpdateCard } from './UpdateCard';
 import { Card } from './widgets';
 
 
@@ -15,6 +16,8 @@ export function AboutScreen() {
         <Text style={styles.tag}>One app for your vehicle's power and sensors</Text>
         <Text style={styles.version}>Version {VERSION} (build {BUILD})</Text>
       </View>
+
+      <UpdateCard />
 
       <Card style={{ gap: 6 }}>
         <Text style={styles.h2}>Supported devices</Text>

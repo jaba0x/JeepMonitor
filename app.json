@@ -2,7 +2,7 @@
   "expo": {
     "name": "JeepMonitor",
     "slug": "jeepmonitor",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -20,7 +20,10 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "versionCode": 400
+      "versionCode": 500,
+      "permissions": [
+        "android.permission.REQUEST_INSTALL_PACKAGES"
+      ]
     },
     "plugins": [
       "expo-dev-client",

@@ -28,6 +28,7 @@ because the vendor app shows one device at a time and is slow to use in a vehicl
 - **Free-form dashboard**: hold a widget to edit, drag to move, drag the corner to resize. Content scales with the
   widget. Graph type (bars, line, area, off), names and labels are set per widget.
 - **Refresh / disconnect / connect** on every device widget, and a fullscreen mode for the whole dashboard.
+- **Self-update** from GitHub releases on the About screen.
 - **GATT explorer** for inspecting devices that have no known protocol yet.
 
 ## Supported devices
@@ -80,15 +81,27 @@ To support a new device: add a parser in `src/protocol`, a `BleSession` subclass
 
 ## Versioning and releases
 
-Semantic versioning, one annotated tag per release (`v0.4.0`), notes in [CHANGELOG.md](CHANGELOG.md). The version is
+Semantic versioning, one annotated tag per release (`v0.5.0`), notes in [CHANGELOG.md](CHANGELOG.md). The version is
 shown on the About screen. The Android `versionCode` is `major * 10000 + minor * 100 + patch`.
+
+### Updating from the app
+
+The About screen checks the latest GitHub release and, if its tag is newer than the installed version, offers
+**Download and install**. The release needs an `.apk` attached. Android asks once to allow JeepMonitor to install
+apps. The new APK must be signed with the same key as the installed one, so build releases from the same machine
+(`expo prebuild` reuses one debug keystore) or switch to your own keystore.
+
+### Cutting a release
 
 ```bash
 npm run bump -- minor        # or patch / major / x.y.z: updates package.json and app.json
 # edit CHANGELOG.md
-git commit -am "Release v0.5.0"
-git tag -a v0.5.0 -m "v0.5.0"
+npx expo prebuild --platform android && (cd android && ./gradlew assembleRelease)
+cp android/app/build/outputs/apk/release/app-release.apk JeepMonitor-0.6.0.apk
+git commit -am "Release v0.6.0"
+git tag -a v0.6.0 -m "v0.6.0"
 git push --follow-tags
+gh release create v0.6.0 JeepMonitor-0.6.0.apk --title "v0.6.0" --notes-file <(sed -n '/## \[0.6.0\]/,/## \[0.5.0\]/p' CHANGELOG.md | sed '1d;$d')
 ```
 
 ## Disclaimer
